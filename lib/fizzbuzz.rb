@@ -1,9 +1,17 @@
+class Fixnum
+
+  def is_divisible_by?(number)
+    self % number == 0
+  end
+
+end
+
 def is_divisible_by_3?(number)
-  number % 3 == 0
+  number.is_divisible_by?(3)
 end
 
 def is_divisible_by_5?(number)
-  number % 5 == 0
+  number.is_divisible_by?(5)
 end
 
 def is_divisible_by_15?(number)
