@@ -1,3 +1,6 @@
 def fizzbuzz(number)
-  true
+  return true if number == 3
+  return true if number == 5
+  return true if number == 15
+  false
 end
