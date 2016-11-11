@@ -1,22 +1,16 @@
-def is_divisible_by_15(number)
-    return true if is_divisible_by_3(number) && is_divisible_by_5(number)
-    false
-end
+class Fixnum
 
-def is_divisible_by_3(number)
-    return true if number % 3 == 0
-    false
-end
+  def is_divisible_by?(number)
+    self % number == 0
+  end
 
-def is_divisible_by_5(number)
-    return true if number % 5 == 0
-    false
-end
+  def fizzbuzz
+      return 0 if self == 0
+      return 'Fizzbuzz' if self.is_divisible_by?(15)
+      return 'Fizz' if self.is_divisible_by?(3)
+      return 'buzz' if self.is_divisible_by?(5)
+      self
+  end
 
-def fizzbuzz(number)
-  return 0 if number == 0
-    return 'Fizzbuzz' if is_divisible_by_15(number)
-    return 'Fizz' if is_divisible_by_3(number)
-    return 'buzz' if is_divisible_by_5(number)
-    number
+
 end

@@ -3,22 +3,22 @@ require "./lib/fizzbuzz.rb"
 describe "Maths tests" do
 
   it 'test returns true if number is divisible by 3' do
-    expect(is_divisible_by_3(3)).to eq true
+    expect(3.is_divisible_by?(3)).to eq true
   end
   it 'test returns false if number is indivisible by 3' do
-    expect(is_divisible_by_3(4)).to eq false
+    expect(4.is_divisible_by?(3)).to eq false
   end
   it 'test returns true if number is divisible by 5' do
-    expect(is_divisible_by_5(5)).to eq true
+    expect(5.is_divisible_by?(5)).to eq true
   end
   it 'test returns false if number is indivisible by 5' do
-    expect(is_divisible_by_5(7)).to eq false
+    expect(7.is_divisible_by?(5)).to eq false
   end
   it 'test returns true if number is divisible by 3 & 5' do
-    expect(is_divisible_by_15(15)).to eq true
+    expect(15.is_divisible_by?(15)).to eq true
   end
   it 'test returns false if number is indivisible by 3 or 5' do
-    expect(is_divisible_by_15(16)).to eq false
+    expect(16.is_divisible_by?(15)).to eq false
   end
 
 end
@@ -26,19 +26,19 @@ end
 describe "Fizzbuzz tests" do
 
   it 'test returns "Fizz" if number is divisible by 3' do
-    expect(fizzbuzz(3)).to eq "Fizz"
+    expect(3.fizzbuzz).to eq "Fizz"
   end
   it 'test returns "buzz" if number is divisible by 5' do
-    expect(fizzbuzz(5)).to eq "buzz"
+    expect(5.fizzbuzz).to eq "buzz"
   end
   it 'test returns "Fizzbuzz" if number is divisible by 3 & 5' do
-    expect(fizzbuzz(15)).to eq "Fizzbuzz"
+    expect(15.fizzbuzz).to eq "Fizzbuzz"
   end
   it 'test returns number if not divisible by 3, 5 or 15' do
-    expect(fizzbuzz(7)).to eq 7
+    expect(7.fizzbuzz).to eq 7
   end
   it 'test returns 0 if passed 0' do
-    expect(fizzbuzz(0)).to eq 0
+    expect(0.fizzbuzz).to eq 0
   end
 
 end
